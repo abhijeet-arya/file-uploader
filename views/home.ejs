@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    <nav class="navBar">File Uploader</nav>
+    <h3>Files available</h3>
+    <div class="main">
+        
+        <div class="filesCont">
+            
+            <%for(var i=0;i<files.length;i++ ){%>
+                
+                <div class="file" id=<%= files[i]%> >
+                    <p class="fileName"><%= files[i]%></p>
+                </div>
+            <% }%>
+    
+        </div>
+        <form id="form" action="" enctype="multipart/form-data">
+            <div class="fileInput">
+                <input type="file" name="file" id="file">
+                <input type="submit" name="submit" class="btn">
+            </div>
+        </form>
+    </div>
+   
+    
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="/js/home.js"></script>
+</html>
